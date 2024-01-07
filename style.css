@@ -11,7 +11,7 @@ html,body{
 
 #page1{
     /* height: 100%; we can give heigth as 100 percent as the parent element main heigh is not given . so % doesnt work here . % means 100% of parent  */
-    height: 100vh;
+   min-height: 100vh; /*minimum heigth must be 100 but it can increase as the content grows*/
     width: 100%;
     background-color: rgb(238,234,226);
     /* its a good approach to give children position relative . so that children stay in limits ....haha */
@@ -98,4 +98,10 @@ nav{
     line-height: 7vw;
     text-align: right;
 
+}
+
+#page1 video{
+    width:100%;
+    margin-top: 3vh;
+    border-radius: 30px;
 }
