@@ -21,7 +21,6 @@ html,body{
 nav{
    padding: 2vw 2vw;
     width: 100%;
-    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,4 +31,46 @@ nav{
     justify-content: center;
     gap: 1vw;
  
+}
+#nav-second h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(93, 87, 87, 0.861);
+    border-radius: 50px;
+    font-weight: 500px;
+    font-size: 17px;
+    position:relative; /*giving power to h4 of nav . power over its child elements like pseudo elements e.g. before,after*/
+    /* transition: all ease 0.5s; */
+    overflow: hidden;  /*hide all the content outside of it not inside*/
+}
+
+#nav-second h4::after{
+    content:""; /*writing here will write there to inside h4 . so leave it just empty*/
+    position:absolute; /* so that it remains in its parent h4 block*/
+    height: 100%; /*take heigth and width 100 percent of parent h4*/
+    width: 100%;
+    background-color: black;
+   
+    left:0; /* in the h4 or parent container left margin is 0*/
+    bottom:-100%;   /*come just below the container*/
+    border-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+/*most imp*/
+#nav-second h4:hover::after {
+    /* Don't use space here in the syntax. Means if I hover on h4, the pseudo-element of h4 means the ::after */
+    bottom: 0;
+    /* Or top: 0; Both take the pseudo-element to place */
+    border-radius: 0px;
+}
+
+#nav-second h4 a{
+    text-decoration: none;
+    color: black;
+    z-index: 9;
+    position: relative;
+}
+
+#nav-second h4:hover a{
+    color: white;
 }
