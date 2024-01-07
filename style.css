@@ -16,6 +16,7 @@ html,body{
     background-color: rgb(238,234,226);
     /* its a good approach to give children position relative . so that children stay in limits ....haha */
     position: relative;
+    padding: 0 2vw;
 }
 
 nav{
@@ -24,6 +25,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
 }
 
 #nav-second{
@@ -34,7 +36,7 @@ nav{
 }
 #nav-second h4{
     padding: 10px 20px;
-    border: 1px solid rgba(93, 87, 87, 0.861);
+    border: 1px solid rgba(5, 5, 5, 0.861);
     border-radius: 50px;
     font-weight: 500px;
     font-size: 17px;
@@ -73,4 +75,27 @@ nav{
 
 #nav-second h4:hover a{
     color: white;
+}
+
+#center{
+    /* background-color: rgb(203, 157, 79); */
+    width:100%;
+    height: 65vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(80, 64, 64);
+    padding-bottom: 2vw;
+
+}
+#left h3{
+    width :25vw;
+    font-size: 2vw;
+    line-height: 2vw;
+}
+#center h1{
+    font-size: 8vw;
+    line-height: 7vw;
+    text-align: right;
+
 }
