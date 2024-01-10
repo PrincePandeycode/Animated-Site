@@ -8,37 +8,94 @@ html,body{
     height: 100%;
     width: 100%;
     padding: 8vw;
+    
 }
 #hero1 {
    
-    height: 50vh; /* Change to vw */
-    width: 50vh;  /* Change to vw */
+    height: 100%; /* Change to vw */
+    width: 100%;  /* Change to vw */
     background-color: orange;
     border-radius: 50%;
     filter: blur(20px);
     position:absolute;
-    animation-name: anime;
-    animation-duration: 3s;
+    animation-name: changc;
+    animation-iteration-count: infinite;
+    animation-duration:3s;
     animation-timing-function: linear;
+    /* animation-name: anime; */
+    
 }
 #hero2{
    
     height: 50vh; /* Change to vw */
     width: 50vh;  /* Change to vw */
-    background-color: rgb(21, 13, 145);
+    background-color: rgba(22, 13, 145, 0.469);
     border-radius: 50%;
     filter: blur(20px);
+    animation-name: changc;
+    animation-iteration-count: infinite;
+    animation-duration:3s;
+    animation-timing-function: linear;
     
 
 }
 
+#hero3{
+   /* position: absolute; */
+    height: 100vh; /* Change to vw */
+    width: 100vh;  /* Change to vw */
+    background-color: rgb(34, 106, 52);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: changc;
+    animation-iteration-count: infinite;
+    animation-duration:3s;
+    animation-timing-function: linear;
+    
+
+}
 @keyframes anime {
 
     from{
-        transform: translate(-10%,-10%);
+        transform: translate(-50%,+500%);
+    }
+   to{
+    translate:transform(100%,100%)
+   }
+    
+}
+
+
+@keyframes anime2 {
+
+    from{
+        transform: translate(-30%,+50%);
     }
    to{
     translate:transform(10%,10%)
    }
+    
+}
+
+/* //email buider 
+// vmware -->  sharing hardware resources
+// hr autoamte
+// content management system --> predicting  */
+
+@keyframes changc {
+    0%{
+        background-color: green;
+    }
+    25%{
+        background-color: yellow;
+    }
+
+    50%{
+        background-color: red;
+    }
+
+    100%{
+        background-color: blueviolet;
+    }
     
 }
