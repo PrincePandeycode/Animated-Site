@@ -31,7 +31,7 @@ html, body {
     left: 0;
     top:50%;
     animation-name: herok;
-    animation-duration: 0.11s;
+    animation-duration: 0.8s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -43,7 +43,7 @@ html, body {
     right: 0;
     top: 50%;
     animation-name: heror;
-    animation-duration: 0.9s;
+    animation-duration: 0.8s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -63,6 +63,8 @@ html, body {
     to{
         left:50%;
         background-color: yellow;
+        width: 10%;
+        height: 20%;
         
     }
     
@@ -77,7 +79,8 @@ html, body {
     to{
         right:50%;
         background-color: brown;
-        
+        width: 10%;
+        height: 20%;
     }
     
 }
@@ -116,6 +119,8 @@ html, body {
     to{
        bottom:50%;
        background-color: crimson;
+       width: 10%;
+        height: 20%;
        
         
     }
@@ -133,6 +138,8 @@ html, body {
     to{
        top:50%;
         background-color: aquamarine;
+        width: 10%;
+        height: 20%;
     }
     
 }
