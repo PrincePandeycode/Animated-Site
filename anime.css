@@ -7,140 +7,51 @@
 html, body {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 #parent {
     height: 100vh;
     width: 100vw;
-    background: blueviolet;
-    position: relative; /* Add position relative to create a positioning context for absolute positioning */
-}
-
-#hero1, #hero2,#hero3,#hero4 {
-    height: 250px;
-    width: 250px;
-   border-radius: 50%;
-   filter: blur(9px);
-    position: absolute; /* Set position to absolute to position them relative to the parent */
-     /* Align vertically in the middle of the parent */
-
+    background: rgb(6, 1, 10);
+    position: relative;
 }
 
 #hero1 {
-    background-color: aqua;
-    left: 0;
-    top:50%;
-    animation-name: herok;
-    animation-duration: 0.8s;
-    animation-timing-function: linear;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute; /* Set position to absolute for positioning within the parent */
+    background-color: red;
+    animation-name: lefttor;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-   
+    animation-direction: forward;
 }
 
-#hero2 {
-    background-color: blue;
-    right: 0;
-    top: 50%;
-    animation-name: heror;
-    animation-duration: 0.8s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
- 
-}
-
-
-
-@keyframes herok {
-
-    from{
-        left:0;
-
-        
+@keyframes lefttor {
+    0% {
+        top: 40%;
+        left: 0;
     }
 
-    to{
-        left:50%;
-        background-color: yellow;
-        width: 10%;
-        height: 20%;
-        
-    }
-    
-}
-
-@keyframes heror {
-
-    from{
-        right:0;
+    25% {
+        top: 100%;
+        left: 50%;
     }
 
-    to{
-        right:50%;
-        background-color: brown;
-        width: 10%;
-        height: 20%;
-    }
-    
-}
-
-#hero3{
-    background-color: black;
-    bottom:0;
-    left:50%;
-    animation-name: herobottom;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    
-}
-
-
-#hero4{
-    background-color: rgb(172, 39, 39);
-    top:0;
-    left:50%;
-    animation-name: herotop;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes herobottom {
-
-    from{
-        bottom:0;
-         background-color: burlywood;
+    50% {
+        top: 50%;
+        left: 100%;
     }
 
-    to{
-       bottom:50%;
-       background-color: crimson;
-       width: 10%;
-        height: 20%;
-       
-        
+    75% {
+        top: 0%;
+        left: 50%;
     }
-    
-}
-
-@keyframes herotop {
-
-    from{
-        top:0;
-        background: rgb(29, 73, 143);
-         
+    100%{
+        top: 50%;
+        left: 0;
     }
-
-    to{
-       top:50%;
-        background-color: aquamarine;
-        width: 10%;
-        height: 20%;
-    }
-    
 }
 
