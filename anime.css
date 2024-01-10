@@ -1,101 +1,139 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
-    padding: 8vw;
-    
+html, body {
+    height: 100vh;
+    width: 100vw;
 }
-#hero1 {
-   
-    height: 100%; /* Change to vw */
-    width: 100%;  /* Change to vw */
-    background-color: orange;
-    border-radius: 50%;
-    filter: blur(20px);
-    position:absolute;
-    animation-name: changc;
-    animation-iteration-count: infinite;
-    animation-duration:3s;
-    animation-timing-function: linear;
-    /* animation-name: anime; */
-    
-}
-#hero2{
-   
-    height: 50vh; /* Change to vw */
-    width: 50vh;  /* Change to vw */
-    background-color: rgba(22, 13, 145, 0.469);
-    border-radius: 50%;
-    filter: blur(20px);
-    animation-name: changc;
-    animation-iteration-count: infinite;
-    animation-duration:3s;
-    animation-timing-function: linear;
-    
 
+#parent {
+    height: 100vh;
+    width: 100vw;
+    background: blueviolet;
+    position: relative; /* Add position relative to create a positioning context for absolute positioning */
+}
+
+#hero1, #hero2,#hero3,#hero4 {
+    height: 250px;
+    width: 250px;
+   border-radius: 50%;
+   filter: blur(9px);
+    position: absolute; /* Set position to absolute to position them relative to the parent */
+     /* Align vertically in the middle of the parent */
+
+}
+
+#hero1 {
+    background-color: aqua;
+    left: 0;
+    top:50%;
+    animation-name: herok;
+    animation-duration: 0.11s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+}
+
+#hero2 {
+    background-color: blue;
+    right: 0;
+    top: 50%;
+    animation-name: heror;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+ 
+}
+
+
+
+@keyframes herok {
+
+    from{
+        left:0;
+
+        
+    }
+
+    to{
+        left:50%;
+        background-color: yellow;
+        
+    }
+    
+}
+
+@keyframes heror {
+
+    from{
+        right:0;
+    }
+
+    to{
+        right:50%;
+        background-color: brown;
+        
+    }
+    
 }
 
 #hero3{
-   /* position: absolute; */
-    height: 100vh; /* Change to vw */
-    width: 100vh;  /* Change to vw */
-    background-color: rgb(34, 106, 52);
-    border-radius: 50%;
-    filter: blur(20px);
-    animation-name: changc;
-    animation-iteration-count: infinite;
-    animation-duration:3s;
+    background-color: black;
+    bottom:0;
+    left:50%;
+    animation-name: herobottom;
+    animation-duration: 1s;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     
-
 }
-@keyframes anime {
+
+
+#hero4{
+    background-color: rgb(172, 39, 39);
+    top:0;
+    left:50%;
+    animation-name: herotop;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes herobottom {
 
     from{
-        transform: translate(-50%,+500%);
+        bottom:0;
+         background-color: burlywood;
     }
-   to{
-    translate:transform(100%,100%)
-   }
+
+    to{
+       bottom:50%;
+       background-color: crimson;
+       
+        
+    }
     
 }
 
-
-@keyframes anime2 {
+@keyframes herotop {
 
     from{
-        transform: translate(-30%,+50%);
+        top:0;
+        background: rgb(29, 73, 143);
+         
     }
-   to{
-    translate:transform(10%,10%)
-   }
+
+    to{
+       top:50%;
+        background-color: aquamarine;
+    }
     
 }
 
-/* //email buider 
-// vmware -->  sharing hardware resources
-// hr autoamte
-// content management system --> predicting  */
-
-@keyframes changc {
-    0%{
-        background-color: green;
-    }
-    25%{
-        background-color: yellow;
-    }
-
-    50%{
-        background-color: red;
-    }
-
-    100%{
-        background-color: blueviolet;
-    }
-    
-}
