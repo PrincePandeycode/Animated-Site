@@ -24,7 +24,7 @@ html, body {
     position: absolute; /* Set position to absolute for positioning within the parent */
     background-color: red;
     animation-name: lefttor;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: forward;
 }
